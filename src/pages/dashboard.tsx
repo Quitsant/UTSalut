@@ -1,3 +1,5 @@
+import fotoHero1 from '../assets/imgDash.png'
+
 function Dashboard() {
     return (
         
@@ -12,7 +14,7 @@ function Dashboard() {
             </div>
             <div className="image">
                 <div className="color"></div>
-                <img src="src/assets/imgDash.png" alt="Description" />    
+                <img src={fotoHero1} alt="Description" />    
             </div>
         </section>
 

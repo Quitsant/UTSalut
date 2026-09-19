@@ -1,6 +1,11 @@
 import '../style/Hero2.css'
+import exampleImage from '../assets/Image1.png'
 
 function Hero2() {
+    const rawImage = [exampleImage, exampleImage, exampleImage, exampleImage];
+    
+    const imageList = [...rawImage, ...rawImage];
+
     return (
         <div className="hero2">
             <div className="container">
@@ -9,14 +14,21 @@ function Hero2() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
-            <div className="images">
-                <image className="image1" id='image'></image>
-                <image className="image2" id='image'></image>
-                <image className="image3" id='image'></image>
-                <image className="image4" id='image'></image>
+            <div className="scroll-container">
+                <div className="scroll-track">
+                    {imageList.map((image, index) => (
+                        <img key={'group1-${index}'} src={image} className="scroll-image" />
+                    ))}
+
+                    {imageList.map((image, index) => (
+                        <img key={'group2-${index}'} src={image} className="scroll-image" />
+                    ))}
+                </div>
             </div>
         </div>
     )
 }
+
+
 
 export default Hero2

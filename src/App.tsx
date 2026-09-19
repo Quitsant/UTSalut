@@ -4,6 +4,7 @@ import Header from './components/header'
 import Footer2 from './components/footer2'
 import Dashboard from './pages/dashboard'
 import Feature1 from './pages/feature1'
+import Hero2 from './pages/hero2'
 
 function ScrollAnimate({ children }: { children: React.ReactNode }) {
   const [isVisible, setVisible] = useState(false);
@@ -61,6 +62,10 @@ function App() {
 
       <ScrollAnimate>
         <Feature1 />
+      </ScrollAnimate>
+
+      <ScrollAnimate>
+        <Hero2 />
       </ScrollAnimate>
 
       <Footer2 />

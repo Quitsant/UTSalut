@@ -16,7 +16,6 @@
     gap: 20px;
 }
 
-
 .hero2 .container .text h1 {
     font-weight: 700;
     font-size: 60px;
@@ -28,14 +27,12 @@
 }
 
 .scroll-container {
-    justify-content: center;
     align-items: center;
     overflow: hidden;
     padding: 20px 0;
     display: flex;
     height: 474px;
     width: 100%;
-
 }
 
 .scroll-track {
@@ -58,6 +55,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        /* Geser sejauh 50% (dikurangi setengah gap) agar perulangannya pas */
+        transform: translateX(calc(-50% - 10px));
     }
 }

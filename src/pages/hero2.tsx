@@ -4,6 +4,7 @@ import exampleImage from '../assets/Image1.png'
 function Hero2() {
     const rawImage = [exampleImage, exampleImage, exampleImage, exampleImage];
     
+    // Total 8 gambar per grup, sudah sangat cukup untuk menutupi layar monitor lebar
     const imageList = [...rawImage, ...rawImage];
 
     return (
@@ -17,18 +18,16 @@ function Hero2() {
             <div className="scroll-container">
                 <div className="scroll-track">
                     {imageList.map((image, index) => (
-                        <img key={'group1-${index}'} src={image} className="scroll-image" />
+                        <img key={`group1-${index}`} src={image} className="scroll-image" alt="carousel" />
                     ))}
 
                     {imageList.map((image, index) => (
-                        <img key={'group2-${index}'} src={image} className="scroll-image" />
+                        <img key={`group2-${index}`} src={image} className="scroll-image" alt="carousel" />
                     ))}
                 </div>
             </div>
         </div>
     )
 }
-
-
 
 export default Hero2
